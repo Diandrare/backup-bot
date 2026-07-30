@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: discord-bots
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_APPLICATION_ID
+        sync: false
+      - key: DISCORD_BOT_TOKEN_2
+        sync: false
+      - key: DISCORD_APPLICATION_ID_2
+        sync: false
